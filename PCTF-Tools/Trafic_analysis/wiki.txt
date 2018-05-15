@@ -1,0 +1,21 @@
+##
+##	CSE 545 - Spring 2018
+##	Team 9: Black Shadow (blackshadow@asu.edu)
+##
+
+# Capture on LAN interface / show payload / less verbose /display IP address and port / ignore ACK messages / ignore ssh pkt /
+# / ignore arp messages / save to PCAP file testdump.cap 
+tcpdump -i eth0 -Xqn not 'tcp[tcpflags] == tcp-ack' and not port ssh and not port 443 and not arp -w testdump.cap
+
+
+# Capture on LAN interface / show payload in ASCII / less verbose /display IP address and port / only show PSH-ACK pkt / ignore ssh pkt /
+# / ignore arp pkt/ save to PCAP file testdump.cap 
+tcpdump -i eth0 -Aqn 'tcp[13]=24' and not port ssh and not port 443 and not arp
+
+
+# Filtered packet capturing
+tcpdump -i eth0 -Aqn 'tcp[13]=24' and not port ssh and not port 443 and not arp and '(dst 172.31.129.9 and dst portrange 20001-20004)' or '(src 172.31.129.9 and src portrange 20001-20004)'
+
+
+# Read pcap file
+tcpdump -r testdump.cap -qXn
