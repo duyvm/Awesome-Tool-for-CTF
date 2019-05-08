@@ -2,7 +2,7 @@
 # Project "Capture the Flag" (PCTF) - CSE545 Spring 2018
 
 ## Description 
-This project is developed as a part of CSE545 coursework. The tools we developed include backdoor, proxy, reflector, traffic analyzer, vulnerability detector, PHP decoder, and aggressive shellcode. A detailed report is given in "CSE545-Team9-FinalReport.pdf". The "PCTF.pptx" explains how a Capture the Flag challenge works.
+This project is developed in a team of 6 students as a part of CSE545 coursework. The tools we developed include backdoor, proxy, reflector, traffic analyzer, vulnerability detector, PHP decoder, and aggressive shellcode. A detailed report is given in "CSE545-Team9-FinalReport.pdf". The "PCTF.pptx" explains how a Capture the Flag challenge works.
 
 ## Development Environment
 - Python 2.7
